@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Registration form</title>
+
+</head>
+<body>
+<h1><center>REGISTRATION FORM</h1></center>
+<center><img src="r.jpg"alt="r.jpg"height=150 width=400></center>
+<ol>
+<li><p> Full name</p></li>
+<input type = "text"  Id="username">
+<li><p> Gender</p></li>
+<input type="radio" name="gender1"
+value="male"> Male
+<input type="radio" name="gender"
+value="female"> Female
+<li><p> Age</p></li>
+<input type = "number">
+<li><p> Date of birth</p></li>
+<input type = "date">
+<li><p> Email adress</p></li>
+<input type = "email">
+<li><p> nationality</p></li>
+<input type = "text">
+<li><p> Adress</p></li>
+<textarea>
+
+</textarea>
+<li><p> Phone number</p></li>
+<input type = "text">
+<li><p> password</p></li>
+<input type = "password" Id="password">
+
+<li><p> Course</p></li>
+<select name="courses" Id="courses">
+ <option value="bcom">bcom</option>
+ <option value="bba">bba</option>
+ <option value="psychology">
+psychology</option>
+ <option value="bsw">bsw</option>
+
+<li><p> Phone number</p></li>
+<input type = "text">
+</ol>
+<br><button onclick="savedata()">register</button></br>
+<script>
+function savedata()
+{
+let username = document.getElementById("username").value;
+let password = document.getElementById("password").value; 
+localStorage.setItem("username", username);
+localStorage.setItem("password", password);
+alert(localStorage.getItem("username"));
+alert(localStorage.getItem("password"));
+}
+</script>
+
+</body>
+</html>
+
+
